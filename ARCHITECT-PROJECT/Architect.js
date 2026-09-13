@@ -1,4 +1,19 @@
+// Sidebar menu
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.getElementById("sidebar");
+const sidebarCloseBtn = document.getElementById("sidebarCloseBtn");
 
+if (menuBtn && sidebar) {
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.add("active");
+    });
+}
+
+if (sidebarCloseBtn && sidebar) {
+    sidebarCloseBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+}
 const slider = document.querySelector(".product-slider");
 const cards = document.querySelectorAll(".product-card");
 
