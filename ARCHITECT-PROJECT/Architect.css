@@ -575,3 +575,12 @@ FOOTER{
     }
 
 }
+@media(max-width: 500px) {
+    .video-content h1 {
+        font-size: 38px;
+    }
+
+    .video-content .big {
+        font-size: 42px;
+    }
+}
