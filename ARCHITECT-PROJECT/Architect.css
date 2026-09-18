@@ -520,6 +520,31 @@ button{
 button:hover{
     background-color: gray;
 }
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: black;
+    color: white;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    display: none;
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    background-color: #555;
+}
+
 FOOTER{
     HEIGHT: 60PX;
     WIDTH:100%;
