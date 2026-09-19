@@ -24,6 +24,10 @@ body{
      letter-spacing: 3px;
     z-index: 100;
 }
+.navbar a.active {
+    color: #c9a227;
+    border-bottom: 2px solid #c9a227;
+}
 .sidebar {
     position: fixed;
     top: 0;
