@@ -246,6 +246,7 @@ body{
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     
 }
 .product-card img{
@@ -258,9 +259,8 @@ body{
     height: 250px;
 }
 .product-card:hover{
-    transform: scale(1.05);
-    transition: 0.3s ease
-
+    transform: translateY(-8px);
+     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 .product-card label{
     padding-top: 20px;
