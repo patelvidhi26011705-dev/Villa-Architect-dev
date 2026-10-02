@@ -145,3 +145,32 @@ backToTop.addEventListener("click", () => {
     });
 
 });
+// Contact form validation
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const comment = document.getElementById("comment").value.trim();
+
+        if (name === "" || email === "" || subject === "" || comment === "") {
+
+            alert("Please fill all fields.");
+
+        } else {
+
+            alert("Message sent successfully!");
+
+            contactForm.reset();
+        }
+
+    });
+
+}
