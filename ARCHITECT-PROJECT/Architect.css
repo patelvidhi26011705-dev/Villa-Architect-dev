@@ -98,6 +98,22 @@ body{
 .box4:hover{
     background-color: rgba(128,128,128,0.3);
 }
+/* Scroll Reveal Animation */
+#Projects,
+#About,
+.team,
+#Products,
+.slider-container,
+#Contact {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.show-section {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
 /*bif image*/
 .video{
     position: relative;
