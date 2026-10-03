@@ -14,6 +14,24 @@ if (sidebarCloseBtn && sidebar) {
         sidebar.classList.remove("active");
     });
 }
+// Scroll reveal animation
+const sections = document.querySelectorAll(
+    "#Projects, #About, .team, #Products, .slider-container, #Contact"
+);
+
+const revealSections = () => {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if (sectionTop < window.innerHeight - 100) {
+            section.classList.add("show-section");
+        }
+    });
+};
+
+window.addEventListener("scroll", revealSections);
+
+revealSections();
 const slider = document.querySelector(".product-slider");
 const cards = document.querySelectorAll(".product-card");
 
