@@ -2,6 +2,9 @@
 const menuBtn = document.getElementById("menuBtn");
 const sidebar = document.getElementById("sidebar");
 const sidebarCloseBtn = document.getElementById("sidebarCloseBtn");
+const villaSearch = document.getElementById("villaSearch");
+const villaCards = document.querySelectorAll(".product-card");
+
 
 if (menuBtn && sidebar) {
     menuBtn.addEventListener("click", () => {
@@ -61,6 +64,24 @@ if(next && prev && slider){
             slider.style.transform =
             `translateX(-${index * (100 / visibleCards)}%)`;
         }
+    });
+}
+if (villaSearch) {
+    villaSearch.addEventListener("input", () => {
+
+        const searchText = villaSearch.value.toLowerCase();
+
+        villaCards.forEach(card => {
+
+            const villaName = card.textContent.toLowerCase();
+
+            if (villaName.includes(searchText)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
     });
 }
 //villa's pop page
