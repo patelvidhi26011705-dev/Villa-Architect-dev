@@ -253,6 +253,23 @@ body{
     height: 100%;
 
 }
+.villa-search {
+    margin: 20px;
+    text-align: center;
+}
+
+#villaSearch {
+    width: 50%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+#villaSearch:focus {
+    border-color: #555;
+}
 .product-slider{
     display: flex;
     transition: transform 0.5s ease-in-out;
