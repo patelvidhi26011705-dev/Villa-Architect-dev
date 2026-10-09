@@ -431,6 +431,28 @@ body{
     margin: 15px, 0;
     color: black;
 }
+.booking-calculator {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.booking-calculator label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.booking-calculator input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.booking-calculator h3 {
+    margin-top: 20px;
+}
 
 .payment-box #close{
     right: 0;
