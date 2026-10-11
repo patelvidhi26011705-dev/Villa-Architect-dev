@@ -213,3 +213,21 @@ if (contactForm) {
     });
 
 }
+```javascript
+// Dark / Light Mode
+const themeToggle = document.getElementById("themeToggle");
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        const icon = themeToggle.querySelector("i");
+
+        if (document.body.classList.contains("dark-mode")) {
+            icon.className = "fa-solid fa-sun";
+        } else {
+            icon.className = "fa-solid fa-moon";
+        }
+    });
+}
+```
