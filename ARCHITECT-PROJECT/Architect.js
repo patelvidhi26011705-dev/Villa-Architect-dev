@@ -231,3 +231,34 @@ if (themeToggle) {
     });
 }
 ```
+```javascript
+// Copy Villa Link
+const shareButtons = document.querySelectorAll(".share-btn");
+
+shareButtons.forEach(button => {
+    button.addEventListener("click", async () => {
+        const card = button.closest(".product-card");
+        const villaLink = card.querySelector("a");
+
+        if (!villaLink) return;
+
+        const fullLink = new URL(
+            villaLink.getAttribute("href"),
+            window.location.href
+        ).href;
+
+        try {
+            await navigator.clipboard.writeText(fullLink);
+            button.innerHTML = "✓ Link Copied!";
+        } catch {
+            alert("Please open the villa page and copy its URL.");
+        }
+
+        setTimeout(() => {
+            button.innerHTML =
+                '<i class="fa-solid fa-link"></i> Copy Villa Link';
+        }, 2000);
+    });
+});
+```
+
