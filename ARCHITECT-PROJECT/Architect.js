@@ -261,4 +261,20 @@ shareButtons.forEach(button => {
     });
 });
 ```
+// Villa Wishlist
+const wishlistButtons = document.querySelectorAll(".wishlist-btn");
+
+wishlistButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const isSaved = button.classList.toggle("saved");
+        const icon = button.querySelector("i");
+
+        if (isSaved) {
+            icon.className = "fa-solid fa-heart";
+            button.innerHTML = '<i class="fa-solid fa-heart"></i> Added to Wishlist';
+        } else {
+            button.innerHTML = '<i class="fa-regular fa-heart"></i> Add to Wishlist';
+        }
+    });
+});
 
